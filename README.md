@@ -38,7 +38,7 @@ Esta categoria de produtos alavanca componentes comprovados da plataforma WSO2 p
 ## Configurando WSO2 API Manager
 Vamos chamar o diretório de instalação do WSO2 API Management de %WSO2AM_HOME%
 
-Execute um terminal:
+Execute em um terminal:
 ```
 %WSO2AM_HOME%/bin/wso2server.bat --run
 ```
@@ -52,14 +52,14 @@ Acompanhe o log de startup no terminal e depois de um certo tempo verifique se o
 
 
 ## O que é o Swagger CodeGen?
-Swagger-codegen possui um mecanismo com base em modelos para gerar documentação, clientes API e stubs de servidor em diferentes idiomas analisando sua definição OpenAPI / Swagger. Http://swagger.io
+Swagger-codegen possui um mecanismo com base em modelos para gerar documentação, clientes API e stubs de servidor em diferentes idiomas analisando sua definição OpenAPI / Swagger. http://swagger.io
 
-## Vamos gerar um Stub da API de Pague Seguro
+## Vamos gerar um Stub da API Pague Rápido
 Primeiramente baixe do github o pacote do swagger codegen
 
 - [Swagger CodeGen](https://github.com/swagger-api/swagger-codegen)
 
-Para compilar o pacote do Swwagger CodeGen utilize o maven
+Para compilar o pacote do Swagger CodeGen utilize o maven
 ```
 mvn clean package
 ```
@@ -76,13 +76,13 @@ Utilize o postman para realizar testes a esta API.
 
 
 ## Criando / Publicando uma Frontend API
-A frontend API é o conceito utilizado para se referir a API que será exposta para os cansis consumidas. Esta API geralmente criada e gerenciada pelo módulo de API manager e disponibilizar com um proxy no API gateway onde políticas de segurança e controle de vazão são aplicadas.
+A frontend API é o conceito utilizado para se referir a API que será exposta para os canais consumidores. Esta API geralmente é criada e gerenciada pelo módulo do API manager para disponibilizar um proxy no API gateway, onde políticas de segurança e controle de vazão são aplicadas.
 
-- Frontend API: API que será contruída no API Manager da WSO2.
-- Backend API: API que realmente implementa a lógica para executar as operações. No caso deste exercício em particular é o stub gerado swagger codegen
+- Frontend API: API que será contruída no API Manager da WSO2 e consumida pelos canais.
+- Backend API: API que realmente implementa a lógica para executar as operações definias em seu contrato. No caso deste exercício em particular é o stub gerado com o swagger codegen
 
 
-Acessar com usuário administrativo o Publisher do WSO2
+Portanto, acesse o portal Publisher do WSO2 com o usuário administrativo:
 - usuário: admin
 - senha: admin
 
@@ -105,7 +105,10 @@ Para esta atividade realize as atividades a seguir
 - Para esta nova api gere as chaves de acesso a API
 - Selecione a api de pague-rapido e a assine
 - Realize o teste na aba de api console
-- Realize o teste no postman
+- Realize o teste no postman utilizando as credenciais gerada para sua aplicação
+
+Para maiores informações:
+- [Tutorial - Assinar uma API](https://docs.wso2.com/display/AM200/Subscribe+to+an+API)
 
 ## Sua API não está segura, o que fazer?
 API Gateway possuem mecanismos de policies para fazer o controle de sergurança e ameaças.
@@ -122,11 +125,8 @@ Na sequência atue como um desenvolvedor da api
 - Para maiores informações sobre um load test do SoapUI. [SoapUI Load Test](https://www.soapui.org/load-testing/concept.html)
 
 
-Para maiores informações:
-- [Tutorial - Assinar uma API](https://docs.wso2.com/display/AM200/Subscribe+to+an+API)
-
 ## Auditoria
-Como estatística e registro auditar as requisições e resposta ajuda de maneira geral em investigações de problemas e avaliações de auditoria.
+Como estatística e registro de auditoria os payloads ajudam de maneira geral em investigações de problemas e avaliações de auditoria.
 
 Para isto atue como administrador da API para configurar a auditoria:
 - Acesse o portal publisher
@@ -136,17 +136,17 @@ Para isto atue como administrador da API para configurar a auditoria:
 
 Na sequência atue como desenvolvedor da api
 - Realize o teste da api novamente
-- Acompanhe no log do CMD os dados de entrada e saída de cada requisição
+- Acompanhe no log do CMD os dados de entrada e saída de cada requisição / resposta
 
 ## Controlando o Ciclo de Vida
 Nesta seção vamos trabalhar com as versões e ciclo de vida da api pague-rapido
 
-Como administrador de api crie uma nova versão api v2 e aposente e bloquei a versão v1
+Como administrador de api crie uma nova versão api e aposente versão v1
 - Acesse o portal publisher
 - Crie uma versão v2 da api pague-rapido
 - Para esta nova versão continue utilizando o mesmo endpoint da backend API
 - Publique a versão v2 da api pague-rapido
-- Edite a versão v1 da api pague-rapido para bloqueado
+- Edite a versão v1 da api pague-rapido para aposentada
 
 Como desenvolvedor realize as seguintes etapas
 - Acesso o portal do desenvolver / store
@@ -156,4 +156,9 @@ Como desenvolvedor realize as seguintes etapas
 - Realize o teste da api pague-rapido v2
 
 ## Concluindo
-Neste exercício passamos pelos principais conceitos que envolvem o API Management e focamos em produto Open Source da WSO2 para trabalharmos. Porém, existem vários outros produtos e estratégias customizadas para trabalhar com a exposição de APIs publicas e privadas.
+Neste exercício passamos pelos principais conceitos que envolvem o API Management e focamos no produto Open Source da WSO2. Porém, existem vários outros produtos e estratégias customizadas para trabalhar com a exposição de APIs publicas e privadas.
+
+Para maiores informações:
+- [RESTful Cookbook](http://restcookbook.com/)
+- [Winning in the API Economy](https://www.3scale.net/wp-content/uploads/2013/10/Winning-in-the-API-Economy-eBook-3scale.pdf)
+- [API - A Strategy Guide](http://shop.oreilly.com/product/0636920021223.do)
