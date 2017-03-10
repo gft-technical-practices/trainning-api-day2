@@ -74,7 +74,7 @@ npm install
 npm start
 ```
 
-Utilize o postman para realizar testes a esta API.
+Utilize o [postman](https://www.getpostman.com/) para realizar testes a esta API.
 
 
 ## Criando / Publicando uma Frontend API
