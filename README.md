@@ -36,6 +36,8 @@ WSO2 API Manager é uma solução completa de gerenciamento de API de classe emp
 Esta categoria de produtos alavanca componentes comprovados da plataforma WSO2 para proteger APIs e fornece uma governança mais forte em APIs, serviços e aplicativos com visualização completa do ciclo de vida da API.
 
 ## Configurando WSO2 API Manager
+Faça o download do [WS02 API Manager Server](http://wso2.com/api-management/)
+
 Vamos chamar o diretório de instalação do WSO2 API Management de %WSO2AM_HOME%
 
 Execute em um terminal:
