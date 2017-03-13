@@ -112,6 +112,9 @@ Para esta atividade realize as atividades a seguir
 Para maiores informações:
 - [Tutorial - Assinar uma API](https://docs.wso2.com/display/AM200/Subscribe+to+an+API)
 
+Observações:
+ - Durante os testes no console, caso as chamadas retornem erro, verifique se a chamada é HTTPS (Ex.: https://192.168.255.73:8243/PagueRapidoAPIv1/1.0.0/pagamentos). Caso seja, abra a URL em uma nova aba e aceite o certificado de segurança.
+
 ## Sua API não está segura, o que fazer?
 API Gateway possuem mecanismos de policies para fazer o controle de sergurança e ameaças.
 Para este exercício vamos editar e republicar a API para aplicar uma política de prevenção a ataques DDoS (Política de Throttling).
