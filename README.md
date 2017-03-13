@@ -36,6 +36,8 @@ WSO2 API Manager é uma solução completa de gerenciamento de API de classe emp
 Esta categoria de produtos alavanca componentes comprovados da plataforma WSO2 para proteger APIs e fornece uma governança mais forte em APIs, serviços e aplicativos com visualização completa do ciclo de vida da API.
 
 ## Configurando WSO2 API Manager
+Faça o download do [WS02 API Manager Server](http://wso2.com/api-management/)
+
 Vamos chamar o diretório de instalação do WSO2 API Management de %WSO2AM_HOME%
 
 Execute em um terminal:
@@ -72,7 +74,7 @@ npm install
 npm start
 ```
 
-Utilize o postman para realizar testes a esta API.
+Utilize o [postman](https://www.getpostman.com/) para realizar testes a esta API.
 
 
 ## Criando / Publicando uma Frontend API
@@ -109,6 +111,9 @@ Para esta atividade realize as atividades a seguir
 
 Para maiores informações:
 - [Tutorial - Assinar uma API](https://docs.wso2.com/display/AM200/Subscribe+to+an+API)
+
+Observações:
+ - Durante os testes no console, caso as chamadas retornem erro, verifique se a chamada é HTTPS (Ex.: https://192.168.255.73:8243/PagueRapidoAPIv1/1.0.0/pagamentos). Caso seja, abra a URL em uma nova aba e aceite o certificado de segurança.
 
 ## Sua API não está segura, o que fazer?
 API Gateway possuem mecanismos de policies para fazer o controle de sergurança e ameaças.
